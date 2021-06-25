@@ -1,0 +1,31 @@
+﻿<Window x:Class="EmployeeManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeeManagement"
+        mc:Ignorable="d"
+        Title="Employee Record" Height="554.062" Width="910.625">
+    <Grid Margin="0,10,0,-10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="64*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Margin="10,221,10,18" SelectionChanged="DataGrid_SelectionChanged" x:Name="dgvEmployee" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="txtEmpname" HorizontalAlignment="Left" Height="23" Margin="10,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.733,3.416" TextChanged="TextBox_TextChanged_1"/>
+        <TextBox x:Name="txtAge" HorizontalAlignment="Left" Height="23" Margin="10,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.733,3.416" PreviewTextInput="txtAge_PreviewTextInput"/>
+        <TextBox x:Name="txtSalary" HorizontalAlignment="Left" Height="23" Margin="10,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.733,3.416" PreviewTextInput="txtSalary_PreviewTextInput"/>
+        <TextBox x:Name="txtPhone" HorizontalAlignment="Left" Height="23" Margin="31,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258" RenderTransformOrigin="0.733,3.416" TextChanged="TextBox_TextChanged" Grid.Column="1" PreviewTextInput="txtPhone_PreviewTextInput"/>
+        <Button  x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="31,167,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.515,-0.25" Height="36" Click="btnAdd_Click" Grid.Column="1"/>
+        <Button  x:Name="btnCancel"  Content="Cancel" HorizontalAlignment="Left" Margin="179,167,0,0" VerticalAlignment="Top" Width="110" RenderTransformOrigin="0.515,-0.25" Height="36" Grid.Column="1" Click="btnCancel_Click"/>
+        <Label Content="Employee Name" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Height="26" Width="97"/>
+        <DatePicker x:Name="dp_join" HorizontalAlignment="Left" Margin="31,55,0,0" VerticalAlignment="Top" Width="258" Grid.Column="1" Height="24"/>
+        <Label Content="Age" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="10.645,-1.885" Height="26" Width="31"/>
+        <Label Content="Date Joined
+        " HorizontalAlignment="Left" Margin="31,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="10.645,-1.885" Grid.Column="1" Height="26" Width="102"/>
+        <Label Content="Salary" HorizontalAlignment="Left" Margin="10,149,0,0" VerticalAlignment="Top" RenderTransformOrigin="10.645,-1.885" Height="26" Width="41"/>
+        <Label Content="Phone" HorizontalAlignment="Left" Margin="31,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="10.645,-1.885" Grid.Column="1" Height="26" Width="44"/>
+
+    </Grid>
+</Window>
